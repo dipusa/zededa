@@ -1,0 +1,40 @@
+.detail-page-container{
+    
+    width: 30%;
+    border: 1px solid #00897C;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+}
+
+.detail-page-container__image-container {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+
+    img {
+        height: 240px;
+        width: 240px;
+        border:  1px solid;
+        background-size: cover
+    }
+}
+
+.parameters {
+    border-top: 1px solid #00897C;
+    display: flex;
+    padding: 10px;
+}
+
+.name {
+    display: flex;
+    width: 35%;
+    font-weight: bold;
+}
+
+.value {
+    display: flex;
+    flex-grow: 1;
+}

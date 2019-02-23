@@ -1,0 +1,54 @@
+.container {
+    display: flex;
+}
+
+.container__table-container {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    height: 800px;
+
+}
+
+.container__hitmap {
+    display: flex;
+    flex-grow: 1;
+
+    div:nth-child(1) {
+        position: relative !important;
+    }
+}
+
+.ant-table-wrapper {
+    width: 98%;
+}
+
+
+.container__search-and-filter {
+    background-color: #FAFAFA;
+    width: 98%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    input {
+        padding: 5px;
+    }
+
+    span {
+        color: #008274;
+        cursor: pointer;
+        font-weight: bold;
+        font-size: 16px;
+    }
+}
+
+.chart-container {
+    height: 300px;
+    width: 550px;
+    padding-left: 10px;
+    padding-top: 10px;
+}

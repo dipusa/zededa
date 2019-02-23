@@ -3,9 +3,24 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "^3.13.5",
+    "google-maps-react": "^2.0.2",
+    "i": "^0.3.6",
+    "node-sass": "^4.11.0",
+    "npm": "^6.8.0",
+    "r-dom": "^2.4.0",
     "react": "^16.8.2",
+    "react-charts": "^2.0.0-alpha.12",
     "react-dom": "^16.8.2",
-    "react-scripts": "2.1.5"
+    "react-heatmap": "^1.0.6",
+    "react-leaflet-heatmap-layer": "^2.0.0",
+    "react-map-gl-heatmap-overlay": "^1.1.4",
+    "react-redux": "^6.0.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "2.1.5",
+    "redux": "^4.0.1",
+    "redux-actions": "^2.6.4",
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
