@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Table, Icon, Button } from "antd";
 import { connect } from "react-redux";
 import { GoogleApiWrapper, Map, Marker } from "google-maps-react";
-import { Chart } from "react-charts";
 import * as actions from "../../store/actions";
 import "./HomePageContainer.scss";
 
@@ -57,32 +56,6 @@ class HomePageContainer extends Component {
         return (
             <div className="container">
                 <div className="container__table-container">
-                    <div className="chart-container">
-                        <Chart
-                            data={[
-                                {
-                                    label: "Series 1",
-                                    data: [
-                                        [0, 1],
-                                        [1.2, 2],
-                                        [2, 4],
-                                        [3, 2],
-                                        [4, 4]
-                                    ]
-                                }
-                            ]}
-                            axes={[
-                                {
-                                    primary: true,
-                                    type: "linear",
-                                    position: "bottom",
-                                    min: 0,
-                                    max: 24
-                                },
-                                { type: "linear", position: "left" }
-                            ]}
-                        />
-                    </div>
                     <div className="container__search-and-filter">
                         <span onClick={this.sortOnClickHandler}>
                             Sort By Time{" "}
@@ -95,7 +68,7 @@ class HomePageContainer extends Component {
                             />
                         </span>
                         <input
-                            placeholder="Search by title"
+                            placeholder="Search By Title"
                             onChange={this.onChangeHandler}
                         />
                     </div>
@@ -113,7 +86,7 @@ class HomePageContainer extends Component {
                         onClick={this.onMapClick}
                         zoom={5}
                         initialCenter={{
-                            lat: 20.5937,
+                            lat: 20.0937,
                             lng: 78.9629
                         }}
                     >

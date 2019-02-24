@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import FileViewer from "react-file-viewer";
 import "./DetailPageContainer.scss";
 
 class DetailPageContainer extends Component {
@@ -8,6 +9,7 @@ class DetailPageContainer extends Component {
         identity: ""
     };
     componentDidMount() {}
+
     render() {
         if (this.props.report) {
             const identity = this.props.match.params.identity.toLowerCase();
@@ -19,56 +21,63 @@ class DetailPageContainer extends Component {
             }
         }
         return (
-            <div className="detail-page-container">
-                <div className="detail-page-container__image-container">
-                    <img
-                        src={require("../../assetes/" +
-                            this.props.match.params.identity.toLowerCase() +
-                            ".jpeg")}
-                        alt="photo1"
-                    />
+            <React.Fragment>
+                <h2 className="heading">Profile Detail</h2>
+                <div className="detail-page-container">
+                    <div className="detail-page-container__image-container">
+                        <img
+                            src={require("../../assetes/" +
+                                this.props.match.params.identity.toLowerCase() +
+                                ".jpeg")}
+                            alt="photo1"
+                        />
+                    </div>
+                    <div className="detail">
+                        <div className="parameters">
+                            <span className="name">Name</span>
+                            <span className="value">
+                                {this.state.data.identity}
+                            </span>
+                        </div>
+                        <div className="parameters">
+                            <span className="name">Description</span>
+                            <span className="value">
+                                {this.state.data.description}
+                            </span>
+                        </div>
+                        <div className="parameters">
+                            <span className="name">Camera Id</span>
+                            <span className="value">
+                                {this.state.data.camera_id}
+                            </span>
+                        </div>
+                        <div className="parameters">
+                            <span className="name">Identity Type</span>
+                            <span className="value">
+                                {this.state.data.identity_type}
+                            </span>
+                        </div>
+                        <div className="parameters">
+                            <span className="name">Confidence Score</span>
+                            <span className="value">
+                                {this.state.data.confidence_score}
+                            </span>
+                        </div>
+                        <div className="parameters">
+                            <span className="name">City</span>
+                            <span className="value">
+                                {this.state.data.city}
+                            </span>
+                        </div>
+                        <div className="parameters">
+                            <span className="name">Application Id</span>
+                            <span className="value">
+                                {this.state.data.application_id}
+                            </span>
+                        </div>
+                    </div>
                 </div>
-                <div className="detail">
-                    <div className="parameters">
-                        <span className="name">Name</span>
-                        <span className="value">
-                            {this.state.data.identity}
-                        </span>
-                    </div>
-                    <div className="parameters">
-                        <span className="name">Description</span>
-                        <span className="value">Your description here</span>
-                    </div>
-                    <div className="parameters">
-                        <span className="name">Camera Id</span>
-                        <span className="value">
-                            {this.state.data.camera_id}
-                        </span>
-                    </div>
-                    <div className="parameters">
-                        <span className="name">Identity Type</span>
-                        <span className="value">
-                            {this.state.data.identity_type}
-                        </span>
-                    </div>
-                    <div className="parameters">
-                        <span className="name">Confidence Score</span>
-                        <span className="value">
-                            {this.state.data.confidence_score}
-                        </span>
-                    </div>
-                    <div className="parameters">
-                        <span className="name">City</span>
-                        <span className="value">{this.state.data.city}</span>
-                    </div>
-                    <div className="parameters">
-                        <span className="name">Application Id</span>
-                        <span className="value">
-                            {this.state.data.application_id}
-                        </span>
-                    </div>
-                </div>
-            </div>
+            </React.Fragment>
         );
     }
 }
